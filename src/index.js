@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+// import { Provider } from 'react-redux';
+import {Provider} from './components/Xreact-redux/index'
+import store from './store';
+
+
+/* 
+https://www.jianshu.com/p/77bf3944b0f4  —— 简单的文档介绍，用于介绍一些配置
+*/
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
